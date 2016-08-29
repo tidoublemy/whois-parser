@@ -23,8 +23,8 @@ module Whois
       end
 
       tokenizer :scan_header do
-        if @input.scan(/^(.+?):\n/)
-          @tmp["group"] = @input[1]
+        if @input.scan(/^(\S.*?):\n/)
+          tmp["group"] = @input[1]
         end
       end
 
